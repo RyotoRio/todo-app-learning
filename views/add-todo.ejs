@@ -1,0 +1,24 @@
+<%- include('partial/header.ejs') %>
+    <div class="todo-container">
+        <h2 class="todo-title">Add Todo</h2>
+        <a href="/" class="btn">Back</a>
+        <form action="/addTodo" method="post">
+            <div class="new-todo">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" value="" placeholder="Enter Title">
+                </div>
+            </div>
+            <div class="new-todo">
+                <div class="form-group">
+                    <label for="descript">Description</label>
+                    <input type="text" name="descript" value="" placeholder="Enter Description">
+                </div>
+            </div>
+            <div class="new-todo">
+                <button type="submit" class="btn">Save</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <%- include('partial/footer.ejs') %>

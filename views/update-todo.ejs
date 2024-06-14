@@ -1,0 +1,28 @@
+<%- include('partial/header.ejs') %>
+    <div class="table-container">
+        <h2 class="todo-title">Update Todo</h2>
+        <div>
+            <a href="/" class="btn">Back</a>
+
+            <form action="/updateTodo/<%= todo._id %>" method="post">
+                <div class="new-todo">
+                    <div class="form-group">
+                        <label for="title" class="text-light">Title</label>
+                        <input type="text" name="title" placeholder="Title" value="<%= todo.title %>">
+                    </div>
+                </div>
+                <div class="new-todo">
+                    <div class="form-group">
+                        <label for="descript" class="text-light">Title</label>
+                        <input type="text" name="descript" placeholder="Add Description" value="<%= todo.descript %>">
+                    </div>
+                </div> 
+                <div class="new-todo">
+                    <div class="form-group">
+                        <button type="submit" class="btn">Update changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('partial/footer.ejs') %>
